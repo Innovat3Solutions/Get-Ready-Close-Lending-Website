@@ -6,6 +6,18 @@ export const en = {
     'nav.about': 'About Us',
     'nav.contact': 'Contact',
     'nav.schedule': 'Schedule a Call',
+    'nav.submenu.title': 'Loan Solutions',
+    'nav.submenu.fha': 'FHA Loans',
+    'nav.submenu.va': 'VA Loans',
+    'nav.submenu.usda': 'USDA',
+    'nav.submenu.conventional': 'Conventional',
+    'nav.submenu.jumbo': 'Jumbo Loans',
+    'nav.submenu.firstTime': 'First-Time Buyer',
+    'nav.submenu.nonQm': 'Non-QM',
+    'nav.submenu.investment': 'Investment',
+    'nav.submenu.refinance': 'Refinance',
+    'nav.submenu.footerText': 'Not sure which program is right for you?',
+    'nav.submenu.footerBtn': 'Find your loan',
 
     // Footer
     'footer.description': "Providing bespoke mortgage and financial solutions for South Florida's most discerning homeowners.",
@@ -14,11 +26,11 @@ export const en = {
     'footer.rights': '© 2026 GRC Lending. All Rights Reserved. Equal Housing Opportunity.',
 
     // Home Page
-    'home.badge': 'South Florida Lending',
-    'home.hero.title1': 'Your South Florida',
-    'home.hero.title2': 'Mortgage Experts',
-    'home.hero.desc': 'Tailored financial solutions for luxury coastal living and high-end estates in Miami, Palm Beach, and beyond.',
-    'home.hero.cta': 'Get Started Today',
+    'home.hero.badge': 'Your South Florida Mortgage Experts',
+    'home.hero.title1': 'Ready, Set,',
+    'home.hero.title2': 'Close.',
+    'home.hero.desc': "Elevating the standard of South Florida real estate financing. Whether you're purchasing a luxury home in Miami or an investment property, our decades of expertise guarantee a seamless transaction.",
+    'home.hero.cta': 'Start Application',
 
     'home.stats.exp.label': 'Experience',
     'home.stats.exp.desc': 'South Florida Market Experts',
@@ -32,6 +44,12 @@ export const en = {
     'home.about.desc': 'Based in the heart of South Florida, GRC Lending understands the unique nuances of local real estate. From waterfront condominiums in Miami Beach to private estates, our team possesses the deep-rooted connections and market data necessary to navigate complex transactions.',
     'home.about.cta': 'See Our Loan Options',
     'home.about.quote': '"The South Florida market requires specialized local knowledge that typical national lenders simply lack."',
+
+    'home.meet.badge': 'Knowledge is Power',
+    'home.meet.title': 'Meet GRC Lending',
+    'home.meet.p1': 'GRC Lending is a premier full-service mortgage company based in Miami, Florida. We specialize in bespoke real estate financing for luxury homes, investment properties, and commercial developments across the state.',
+    'home.meet.p2': '"Our ultimate goal is to ensure you fall in love with your home, not stress over how to finance it. We surround you with experts who have been in this field for over 25 years to guarantee a smooth closing."',
+    'home.meet.btn': 'Read Our Story',
 
     'home.cta.title': 'Ready to find the right mortgage?',
     'home.cta.desc': 'Whether you are purchasing your first luxury condo or refinancing a waterfront estate, we have the perfect loan product for you.',

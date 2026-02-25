@@ -32,41 +32,41 @@ export default function Header() {
               {/* Mega Menu styling for Mortgages */}
               <div className="relative group/nav">
                 <Link className={`text-[14px] font-medium transition-colors flex items-center gap-1 py-8 ${isScrolled ? 'text-slate-600 hover:text-corp-grey' : 'text-white/80 hover:text-white'}`} to="/mortgages">
-                  Programs
+                  {t('nav.mortgages') || "Programs"}
                 </Link>
 
                 <div className="absolute top-[80px] left-0 mt-2 w-[650px] shadow-[0_20px_40px_rgba(0,0,0,0.1)] opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-300 transform origin-top -translate-y-2 group-hover/nav:translate-y-0 z-50">
                   <div className="bg-[#FAF9F6] rounded-3xl overflow-hidden border border-slate-200 flex flex-col">
                     <div className="p-8">
-                      <p className="text-sm font-bold text-corp-grey mb-6 px-3 tracking-wide">Loan Solutions</p>
+                      <p className="text-sm font-bold text-corp-grey mb-6 px-3 tracking-wide">{t('nav.submenu.title') || "Loan Solutions"}</p>
                       <div className="grid grid-cols-3 gap-6">
                         {/* Column 1 */}
                         <div className="flex flex-col space-y-2">
-                          <Link to="/mortgages/fha" className="px-3 py-2 rounded-xl text-[14px] font-medium text-slate-600 hover:bg-white hover:text-[#1a1814] hover:shadow-sm transition-all">FHA Loans</Link>
-                          <Link to="/mortgages/va" className="px-3 py-2 rounded-xl text-[14px] font-medium text-slate-600 hover:bg-white hover:text-[#1a1814] hover:shadow-sm transition-all">VA Loans</Link>
-                          <Link to="/mortgages/usda" className="px-3 py-2 rounded-xl text-[14px] font-medium text-slate-600 hover:bg-white hover:text-[#1a1814] hover:shadow-sm transition-all">USDA</Link>
+                          <Link to="/mortgages/fha" className="px-3 py-2 rounded-xl text-[14px] font-medium text-slate-600 hover:bg-white hover:text-[#1a1814] hover:shadow-sm transition-all">{t('nav.submenu.fha') || "FHA Loans"}</Link>
+                          <Link to="/mortgages/va" className="px-3 py-2 rounded-xl text-[14px] font-medium text-slate-600 hover:bg-white hover:text-[#1a1814] hover:shadow-sm transition-all">{t('nav.submenu.va') || "VA Loans"}</Link>
+                          <Link to="/mortgages/usda" className="px-3 py-2 rounded-xl text-[14px] font-medium text-slate-600 hover:bg-white hover:text-[#1a1814] hover:shadow-sm transition-all">{t('nav.submenu.usda') || "USDA"}</Link>
                         </div>
 
                         {/* Column 2 */}
                         <div className="flex flex-col space-y-2">
-                          <Link to="/mortgages/conventional" className="px-3 py-2 rounded-xl text-[14px] font-medium text-slate-600 hover:bg-white hover:text-[#1a1814] hover:shadow-sm transition-all">Conventional</Link>
-                          <Link to="/mortgages/jumbo" className="px-3 py-2 rounded-xl text-[14px] font-medium text-slate-600 hover:bg-white hover:text-[#1a1814] hover:shadow-sm transition-all">Jumbo Loans</Link>
-                          <Link to="/mortgages/first-time-buyer" className="px-3 py-2 rounded-xl text-[14px] font-medium text-slate-600 hover:bg-white hover:text-[#1a1814] hover:shadow-sm transition-all">First-Time Buyer</Link>
+                          <Link to="/mortgages/conventional" className="px-3 py-2 rounded-xl text-[14px] font-medium text-slate-600 hover:bg-white hover:text-[#1a1814] hover:shadow-sm transition-all">{t('nav.submenu.conventional') || "Conventional"}</Link>
+                          <Link to="/mortgages/jumbo" className="px-3 py-2 rounded-xl text-[14px] font-medium text-slate-600 hover:bg-white hover:text-[#1a1814] hover:shadow-sm transition-all">{t('nav.submenu.jumbo') || "Jumbo Loans"}</Link>
+                          <Link to="/mortgages/first-time-buyer" className="px-3 py-2 rounded-xl text-[14px] font-medium text-slate-600 hover:bg-white hover:text-[#1a1814] hover:shadow-sm transition-all">{t('nav.submenu.firstTime') || "First-Time Buyer"}</Link>
                         </div>
 
                         {/* Column 3 */}
                         <div className="flex flex-col space-y-2">
-                          <Link to="/mortgages/non-qm" className="px-3 py-2 rounded-xl text-[14px] font-medium text-slate-600 hover:bg-white hover:text-[#1a1814] hover:shadow-sm transition-all">Non-QM</Link>
-                          <Link to="/mortgages/investment" className="px-3 py-2 rounded-xl text-[14px] font-medium text-slate-600 hover:bg-white hover:text-[#1a1814] hover:shadow-sm transition-all">Investment</Link>
-                          <Link to="/mortgages/refinance" className="px-3 py-2 rounded-xl text-[14px] font-medium text-slate-600 hover:bg-white hover:text-[#1a1814] hover:shadow-sm transition-all">Refinance</Link>
+                          <Link to="/mortgages/non-qm" className="px-3 py-2 rounded-xl text-[14px] font-medium text-slate-600 hover:bg-white hover:text-[#1a1814] hover:shadow-sm transition-all">{t('nav.submenu.nonQm') || "Non-QM"}</Link>
+                          <Link to="/mortgages/investment" className="px-3 py-2 rounded-xl text-[14px] font-medium text-slate-600 hover:bg-white hover:text-[#1a1814] hover:shadow-sm transition-all">{t('nav.submenu.investment') || "Investment"}</Link>
+                          <Link to="/mortgages/refinance" className="px-3 py-2 rounded-xl text-[14px] font-medium text-slate-600 hover:bg-white hover:text-[#1a1814] hover:shadow-sm transition-all">{t('nav.submenu.refinance') || "Refinance"}</Link>
                         </div>
                       </div>
                     </div>
 
                     {/* Bottom Quick Action */}
                     <div className="bg-slate-100/50 p-6 border-t border-slate-200 flex justify-between items-center">
-                      <span className="text-sm font-medium text-slate-500">Not sure which program is right for you?</span>
-                      <Link to="/contact" className="text-xs font-bold uppercase tracking-widest text-[#1a1814] hover:text-grc-blue flex items-center gap-1 transition-colors">Find your loan <span className="material-symbols-outlined text-[14px]">arrow_forward</span></Link>
+                      <span className="text-sm font-medium text-slate-500">{t('nav.submenu.footerText') || "Not sure which program is right for you?"}</span>
+                      <Link to="/contact" className="text-xs font-bold uppercase tracking-widest text-[#1a1814] hover:text-grc-blue flex items-center gap-1 transition-colors">{t('nav.submenu.footerBtn') || "Find your loan"} <span className="material-symbols-outlined text-[14px]">arrow_forward</span></Link>
                     </div>
 
                   </div>
@@ -172,28 +172,28 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[28px] font-medium text-white tracking-tight"
               >
-                Programs
+                {t('nav.mortgages') || "Programs"}
               </Link>
               <Link
                 to="/calculator"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[28px] font-medium text-white tracking-tight"
               >
-                Calculator
+                {t('nav.calculator') || "Calculator"}
               </Link>
               <Link
                 to="/about"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[28px] font-medium text-white tracking-tight"
               >
-                About Us
+                {t('nav.about') || "About Us"}
               </Link>
               <Link
                 to="/contact"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[28px] font-medium text-white tracking-tight"
               >
-                Contact
+                {t('nav.contact') || "Contact"}
               </Link>
 
               <div className="w-full h-[1px] bg-white/10 my-4"></div>

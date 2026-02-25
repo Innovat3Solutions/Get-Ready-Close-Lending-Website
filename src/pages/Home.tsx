@@ -65,21 +65,21 @@ export default function Home() {
                     >
                         <div className="inline-flex items-center justify-center gap-2 px-6 py-2 bg-white/5 border border-white/20 backdrop-blur-md rounded-full mb-10 text-white text-[10px] font-bold uppercase tracking-[0.3em]">
                             <span className="w-1.5 h-1.5 rounded-full bg-grc-blue animate-pulse"></span>
-                            Your South Florida Mortgage Experts
+                            {t('home.hero.badge') || "Your South Florida Mortgage Experts"}
                         </div>
 
                         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-white mb-8 leading-[1.05] tracking-tight">
                             <span className="sr-only">Your Premiere South Florida Mortgage Lender</span>
-                            Ready, Set, <span className="italic font-light text-grc-blue">Close.</span>
+                            {t('home.hero.title1') || "Ready, Set,"} <span className="italic font-light text-grc-blue">{t('home.hero.title2') || "Close."}</span>
                         </h1>
 
                         <p className="text-lg md:text-xl text-slate-300 mb-12 leading-relaxed font-light max-w-2xl text-center mx-auto">
-                            Elevating the standard of South Florida real estate financing. Whether you're purchasing a luxury home in Miami or an investment property, our decades of expertise guarantee a seamless transaction.
+                            {t('home.hero.desc') || "Elevating the standard of South Florida real estate financing. Whether you're purchasing a luxury home in Miami or an investment property, our decades of expertise guarantee a seamless transaction."}
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-6 justify-center">
                             <Link to="/contact" className="group relative inline-flex items-center justify-center bg-transparent border border-white/40 text-white px-12 py-4 text-xs font-bold uppercase tracking-[0.2em] overflow-hidden transition-all duration-500 hover:border-white">
-                                <span className="relative z-10 transition-colors duration-500 group-hover:text-corp-grey">Start Application</span>
+                                <span className="relative z-10 transition-colors duration-500 group-hover:text-corp-grey">{t('home.hero.cta') || "Start Application"}</span>
                                 <div className="absolute inset-0 bg-white transform scale-x-0 origin-left transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-x-100"></div>
                             </Link>
                         </div>
@@ -153,17 +153,17 @@ export default function Home() {
                         >
                             <div className="flex items-center gap-4 mb-6">
                                 <span className="w-12 h-[1px] bg-grc-blue"></span>
-                                <h2 className="text-grc-blue font-bold text-[10px] uppercase tracking-[0.3em]">Knowledge is Power</h2>
+                                <h2 className="text-grc-blue font-bold text-[10px] uppercase tracking-[0.3em]">{t('home.meet.badge') || "Knowledge is Power"}</h2>
                             </div>
-                            <h3 className="font-display text-4xl md:text-5xl lg:text-5xl text-corp-grey mb-8 leading-[1.1] tracking-tight">Meet GRC Lending</h3>
+                            <h3 className="font-display text-4xl md:text-5xl lg:text-5xl text-corp-grey mb-8 leading-[1.1] tracking-tight">{t('home.meet.title') || "Meet GRC Lending"}</h3>
                             <p className="text-slate-500 text-lg mb-8 leading-relaxed font-light">
-                                GRC Lending is a premier full-service mortgage company based in Miami, Florida. We specialize in bespoke real estate financing for luxury homes, investment properties, and commercial developments across the state.
+                                {t('home.meet.p1') || "GRC Lending is a premier full-service mortgage company based in Miami, Florida. We specialize in bespoke real estate financing for luxury homes, investment properties, and commercial developments across the state."}
                             </p>
                             <p className="text-slate-500 text-lg mb-12 leading-relaxed font-light">
-                                "Our ultimate goal is to ensure you fall in love with your home, not stress over how to finance it. We surround you with experts who have been in this field for over 25 years to guarantee a smooth closing."
+                                {t('home.meet.p2') || '"Our ultimate goal is to ensure you fall in love with your home, not stress over how to finance it. We surround you with experts who have been in this field for over 25 years to guarantee a smooth closing."'}
                             </p>
                             <Link to="/about" className="group relative inline-flex items-center justify-center bg-transparent border border-corp-grey text-corp-grey px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] overflow-hidden transition-all duration-500">
-                                <span className="relative z-10 transition-colors duration-500 group-hover:text-white">Read Our Story</span>
+                                <span className="relative z-10 transition-colors duration-500 group-hover:text-white">{t('home.meet.btn') || "Read Our Story"}</span>
                                 <div className="absolute inset-0 bg-corp-grey transform scale-x-0 origin-left transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-x-100"></div>
                             </Link>
                         </motion.div>

@@ -6,6 +6,18 @@ export const es = {
     'nav.about': 'Nosotros',
     'nav.contact': 'Contacto',
     'nav.schedule': 'Programar Llamada',
+    'nav.submenu.title': 'Soluciones de Préstamos',
+    'nav.submenu.fha': 'Préstamos FHA',
+    'nav.submenu.va': 'Préstamos VA',
+    'nav.submenu.usda': 'USDA',
+    'nav.submenu.conventional': 'Convencional',
+    'nav.submenu.jumbo': 'Préstamos Jumbo',
+    'nav.submenu.firstTime': 'Primeros Compradores',
+    'nav.submenu.nonQm': 'No-QM',
+    'nav.submenu.investment': 'Inversión',
+    'nav.submenu.refinance': 'Refinanciamiento',
+    'nav.submenu.footerText': '¿No está seguro de qué programa es el adecuado para usted?',
+    'nav.submenu.footerBtn': 'Encuentre su préstamo',
 
     // Footer
     'footer.description': "Proporcionando hipotecas a medida y soluciones financieras para los propietarios más exigentes del sur de la Florida.",
@@ -14,11 +26,11 @@ export const es = {
     'footer.rights': '© 2026 GRC Lending. Todos los derechos reservados. Igualdad de Oportunidades de Vivienda.',
 
     // Home Page
-    'home.badge': 'Préstamos en el Sur de la Florida',
-    'home.hero.title1': 'Sus Expertos Hipotecarios',
-    'home.hero.title2': 'en el Sur de la Florida',
-    'home.hero.desc': 'Soluciones financieras a medida para la vida costera de lujo y propiedades de alto nivel en Miami, Palm Beach y más allá.',
-    'home.hero.cta': 'Comenzar Hoy',
+    'home.hero.badge': 'Sus Expertos Hipotecarios del Sur de la Florida',
+    'home.hero.title1': 'En sus marcas, listos,',
+    'home.hero.title2': 'Cierre.',
+    'home.hero.desc': 'Elevando el estándar del financiamiento inmobiliario en el sur de la Florida. Ya sea que esté comprando una casa de lujo en Miami o una propiedad de inversión, nuestras décadas de experiencia garantizan una transacción sin problemas.',
+    'home.hero.cta': 'Iniciar Solicitud',
 
     'home.stats.exp.label': 'Experiencia',
     'home.stats.exp.desc': 'Expertos del Mercado en el Sur de la Florida',
@@ -32,6 +44,12 @@ export const es = {
     'home.about.desc': 'Con sede en el corazón del sur de la Florida, GRC Lending comprende los matices únicos de los bienes raíces locales. Desde condominios frente al mar en Miami Beach hasta fincas privadas, nuestro equipo posee las conexiones profundas y los datos del mercado necesarios para navegar transacciones complejas.',
     'home.about.cta': 'Ver Nuestras Opciones de Préstamos',
     'home.about.quote': '"El mercado del sur de la Florida requiere un conocimiento local especializado del que carecen los prestamistas nacionales típicos."',
+
+    'home.meet.badge': 'El Conocimiento es Poder',
+    'home.meet.title': 'Conozca a GRC Lending',
+    'home.meet.p1': 'GRC Lending es una compañía hipotecaria de servicio completo de primer nivel con sede en Miami, Florida. Nos especializamos en financiamiento inmobiliario a medida para casas de lujo, propiedades de inversión y desarrollos comerciales en todo el estado.',
+    'home.meet.p2': '"Nuestro objetivo final es garantizar que se enamore de su hogar, no que se estrese sobre cómo financiarlo. Lo rodeamos de expertos que han estado en este campo durante más de 25 años para garantizar un cierre sin problemas."',
+    'home.meet.btn': 'Lea Nuestra Historia',
 
     'home.cta.title': '¿Listo para encontrar la hipoteca adecuada?',
     'home.cta.desc': 'Ya sea que esté comprando su primer condominio de lujo o refinanciando una finca frente al mar, tenemos el producto de préstamo perfecto para usted.',
