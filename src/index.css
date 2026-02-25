@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #1152d4;
-  --color-accent-gold: #C5A059;
-  --color-deep-green: #0A2A22;
-  --color-background-light: #f6f6f8;
-  --color-background-dark: #101622;
-  --font-display: "Manrope", sans-serif;
-  --font-serif: "Playfair Display", serif;
+  --color-grc-red: #D02E2E;
+  --color-growth-green: #61B15A;
+  --color-grc-blue: #00A3E0;
+  --color-corp-grey: #333333;
+  --color-light-grey: #F5F7FA;
+
+  --font-display: 'AlibabaSans-Medium', sans-serif;
+  --font-body: 'MiSans-Regular', sans-serif;
 }
 
 @layer utilities {
@@ -15,9 +16,53 @@
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
   }
-  .hero-gradient {
-    background: linear-gradient(rgba(10, 42, 34, 0.6), rgba(10, 42, 34, 0.3)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
+
+  /* Hide scrollbar for carousels */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@font-face {
+  font-family: 'MiSans-Regular';
+  src: url('https://assets-persist.lovart.ai/agent-static-assets/MiSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'MiSans-Bold';
+  src: url('https://assets-persist.lovart.ai/agent-static-assets/MiSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'AlibabaSans-Medium';
+  src: url('https://assets-persist.lovart.ai/agent-static-assets/AlibabaSans-Medium.otf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'AlibabaSans-Regular';
+  src: url('https://assets-persist.lovart.ai/agent-static-assets/AlibabaSans-Regular.otf') format('opentype');
+  font-weight: normal;
+}
+
+body {
+  font-family: 'MiSans-Regular', sans-serif;
+  color: #333333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'AlibabaSans-Medium', sans-serif;
 }

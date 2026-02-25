@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRC Brand Guidelines</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'MiSans-Regular';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/MiSans-Regular.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'MiSans-Bold';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/MiSans-Bold.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'AlibabaSans-Medium';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/AlibabaSans-Medium.otf') format('opentype');
+        }
+        @font-face {
+            font-family: 'AlibabaSans-Regular';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/AlibabaSans-Regular.otf') format('opentype');
+        }
+
+        :root {
+            --primary-red: #D93F3C;
+            --primary-green: #2EA84A;
+            --primary-cyan: #1DA1F2; /* Approximated based on description, though description says cyan, commonly mortgage logos might use a teal/blue */
+            --primary-blue: #00AEEF; /* Adjusted to fit the likely GRC colors from typical logos, maybe more cyan */
+            --dark-grey: #333333;
+            --light-grey: #F5F7FA;
+            --text-color: #2C3E50;
+            --white: #FFFFFF;
+        }
+
+        /* Based on the logo image provided, let's refine the colors */
+        /* The image has vertical bars. Let's assume Red, Green, and a lighter Blue/Cyan. */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1920px;
+            background-color: #ffffff;
+            font-family: 'MiSans-Regular', sans-serif;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            background: #fff;
+            padding-bottom: 100px;
+        }
+
+        /* Header Section */
+        .header {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #eef1f5 100%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 120px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            right: -100px;
+            top: -100px;
+            width: 600px;
+            height: 600px;
+            background: rgba(46, 168, 74, 0.05);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            right: 300px;
+            bottom: -200px;
+            width: 500px;
+            height: 500px;
+            background: rgba(217, 63, 60, 0.05);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .header-content {
+            z-index: 2;
+            width: 50%;
+        }
+
+        .header-title {
+            font-family: 'AlibabaSans-Medium', sans-serif;
+            font-size: 80px;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: var(--dark-grey);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .header-subtitle {
+            font-size: 32px;
+            color: #666;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .brand-logo-large {
+            width: 600px;
+            height: auto;
+            object-fit: contain;
+            z-index: 2;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
+        }
+
+        /* Main Content Grid */
+        .grid-wrapper {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 40px;
+            padding: 80px 120px;
+        }
+
+        /* Section Styling */
+        .section-title {
+            font-family: 'MiSans-Bold', sans-serif;
+            font-size: 48px;
+            color: var(--dark-grey);
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            grid-column: span 12;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .section-title i {
+            margin-right: 15px;
+            font-size: 40px;
+            color: var(--primary-green);
+        }
+
+        /* 1. Logo Usage */
+        .logo-section {
+            grid-column: span 12;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .logo-card {
+            background: #FAFAFA;
+            padding: 40px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+            position: relative;
+        }
+
+        .logo-card h3 {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            font-size: 24px;
+            color: #999;
+            font-family: 'AlibabaSans-Regular';
+        }
+
+        .logo-demo-img {
+            width: 80%;
+            height: auto;
+        }
+
+        .clear-space-box {
+            border: 1px dashed #999;
+            padding: 40px;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .clear-space-label {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            padding: 0 10px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .usage-grid {
+            grid-column: span 12;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .usage-item {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .usage-preview {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            position: relative;
+        }
+
+        .usage-preview.wrong::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255,0,0,0.05);
+        }
+        
+        .usage-preview.wrong i {
+            position: absolute;
+            top: 10px; right: 10px;
+            color: #ff4d4f;
+            font-size: 24px;
+        }
+
+        .usage-preview.correct i {
+            position: absolute;
+            top: 10px; right: 10px;
+            color: #52c41a;
+            font-size: 24px;
+        }
+
+        .usage-desc {
+            padding: 15px;
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* 2. Color Palette */
+        .color-section {
+            grid-column: span 12;
+            margin-bottom: 60px;
+        }
+
+        .color-row {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .color-swatch-large {
+            flex: 1;
+            height: 250px;
+            border-radius: 16px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .color-swatch-large:hover {
+            transform: translateY(-5px);
+        }
+
+        .swatch-red { background: #D02E2E; } /* Red bar */
+        .swatch-green { background: #61B15A; } /* Green bar */
+        .swatch-blue { background: #00A3E0; } /* Cyan/Blue bar */
+        .swatch-dark { background: #333333; } /* Text */
+
+        .color-info h4 {
+            font-size: 24px;
+            margin-bottom: 5px;
+            font-family: 'AlibabaSans-Medium';
+        }
+
+        .color-info p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* 3. Typography */
+        .typo-section {
+            grid-column: span 12;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            background: #F8F9FA;
+            padding: 60px;
+            border-radius: 20px;
+        }
+
+        .font-display h2 {
+            font-size: 120px;
+            font-family: 'AlibabaSans-Medium';
+            line-height: 1;
+            margin-bottom: 20px;
+            color: var(--dark-grey);
+        }
+
+        .font-name {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 40px;
+            display: block;
+        }
+
+        .typo-hierarchy div {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        .typo-hierarchy h1 { font-size: 60px; font-family: 'MiSans-Bold'; color: #333; margin-bottom: 10px; }
+        .typo-hierarchy h2 { font-size: 40px; font-family: 'MiSans-Bold'; color: #333; margin-bottom: 10px; }
+        .typo-hierarchy h3 { font-size: 28px; font-family: 'MiSans-Regular'; color: #333; margin-bottom: 10px; }
+        .typo-hierarchy p { font-size: 18px; line-height: 1.6; color: #666; }
+
+        .typo-label {
+            font-size: 14px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* 4. Design Elements */
+        .elements-section {
+            grid-column: span 12;
+            display: flex;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .element-card {
+            flex: 1;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .icon-box {
+            background: #f4f6f8;
+            height: 80px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: #333;
+        }
+
+        /* 5. Application Mockups */
+        .mockup-section {
+            grid-column: span 12;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .mockup-card {
+            background: #f5f5f5;
+            height: 500px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card-bg {
+            width: 400px;
+            height: 240px;
+            background: #fff;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            position: relative;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-logo {
+            width: 120px;
+        }
+
+        .card-info {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .mockup-label {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            background: #fff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 60px;
+            padding: 40px 120px;
+            background: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer p {
+            font-size: 16px;
+            opacity: 0.7;
+        }
+
+        /* Geometric Decoration */
+        .geo-shape {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.6;
+        }
+
+        .shape-bar {
+            width: 20px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <h1 class="header-title">Brand Identity<br>Guidelines</h1>
+            <p class="header-subtitle">Standardizing the visual language of GRC Mortgage</p>
+            <div style="display: flex; gap: 20px;">
+                <span style="background: var(--dark-grey); color: #fff; padding: 10px 20px; border-radius: 30px; font-size: 14px;">Version 1.0</span>
+                <span style="background: rgba(0,0,0,0.05); padding: 10px 20px; border-radius: 30px; font-size: 14px;">2024 Edition</span>
+            </div>
+        </div>
+        <img src="https://a.lovart.ai/artifacts/user/YxmGso6bO7GpZNFb.png" alt="GRC Logo" class="brand-logo-large">
+    </header>
+
+    <div class="container">
+        <div class="grid-wrapper">
+
+            <!-- Logo Usage -->
+            <div class="section-title">
+                <i class="ri-shield-check-line"></i> Logo Usage
+            </div>
+
+            <div class="logo-section">
+                <div class="logo-card">
+                    <h3>Primary Logo</h3>
+                    <img src="https://a.lovart.ai/artifacts/user/YxmGso6bO7GpZNFb.png" alt="Primary Logo" class="logo-demo-img">
+                    <p style="margin-top: 20px; color: #666; text-align: center;">The full-color version is the preferred version for all communications.</p>
+                </div>
+                <div class="logo-card">
+                    <h3>Clear Space</h3>
+                    <div class="clear-space-box">
+                        <span class="clear-space-label">x</span>
+                        <img src="https://a.lovart.ai/artifacts/user/YxmGso6bO7GpZNFb.png" alt="Clear Space" style="width: 300px;">
+                        <div style="position: absolute; top: 0; bottom: 0; left: -20px; width: 20px; border-right: 1px dashed #999; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #666;">x</div>
+                        <div style="position: absolute; top: -20px; left: 0; right: 0; height: 20px; border-bottom: 1px dashed #999; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #666;">x</div>
+                    </div>
+                    <p style="margin-top: 20px; color: #666; text-align: center;">Minimum clear space is defined as 'x', equal to the height of the 'GRC' letters.</p>
+                </div>
+            </div>
+
+            <div class="usage-grid">
+                <div class="usage-item">
+                    <div class="usage-preview correct">
+                        <i class="ri-check-line"></i>
+                        <img src="https://a.lovart.ai/artifacts/user/YxmGso6bO7GpZNFb.png" style="width: 150px;">
+                    </div>
+                    <div class="usage-desc">Use on white background</div>
+                </div>
+                <div class="usage-item">
+                    <div class="usage-preview correct" style="background: #333;">
+                        <i class="ri-check-line"></i>
+                        <img src="https://a.lovart.ai/artifacts/user/YxmGso6bO7GpZNFb.png" style="width: 150px; filter: brightness(0) invert(1);">
+                    </div>
+                    <div class="usage-desc">Use all-white on dark</div>
+                </div>
+                <div class="usage-item">
+                    <div class="usage-preview wrong">
+                        <i class="ri-close-line"></i>
+                        <img src="https://a.lovart.ai/artifacts/user/YxmGso6bO7GpZNFb.png" style="width: 150px; transform: rotate(-5deg);">
+                    </div>
+                    <div class="usage-desc">Do not rotate</div>
+                </div>
+                <div class="usage-item">
+                    <div class="usage-preview wrong">
+                        <i class="ri-close-line"></i>
+                        <img src="https://a.lovart.ai/artifacts/user/YxmGso6bO7GpZNFb.png" style="width: 150px; filter: hue-rotate(90deg);">
+                    </div>
+                    <div class="usage-desc">Do not change colors</div>
+                </div>
+            </div>
+
+            <!-- Color Palette -->
+            <div class="section-title" style="margin-top: 40px;">
+                <i class="ri-palette-line"></i> Color Palette
+            </div>
+
+            <div class="color-section">
+                <p style="font-size: 18px; color: #666; max-width: 800px; margin-bottom: 20px;">
+                    Our color palette reflects the vibrant and trustworthy spirit of South Florida lending. The tri-color bar represents stability, growth, and clarity.
+                </p>
+                <div class="color-row">
+                    <div class="color-swatch-large swatch-red">
+                        <div class="color-info">
+                            <h4>GRC Red</h4>
+                            <p>HEX: #D02E2E</p>
+                            <p>RGB: 208, 46, 46</p>
+                            <p>CMYK: 12, 95, 95, 3</p>
+                        </div>
+                    </div>
+                    <div class="color-swatch-large swatch-green">
+                        <div class="color-info">
+                            <h4>Growth Green</h4>
+                            <p>HEX: #61B15A</p>
+                            <p>RGB: 97, 177, 90</p>
+                            <p>CMYK: 66, 0, 84, 0</p>
+                        </div>
+                    </div>
+                    <div class="color-swatch-large swatch-blue">
+                        <div class="color-info">
+                            <h4>Clear Sky Blue</h4>
+                            <p>HEX: #00A3E0</p>
+                            <p>RGB: 0, 163, 224</p>
+                            <p>CMYK: 100, 10, 0, 0</p>
+                        </div>
+                    </div>
+                    <div class="color-swatch-large swatch-dark">
+                        <div class="color-info">
+                            <h4>Corporate Grey</h4>
+                            <p>HEX: #333333</p>
+                            <p>RGB: 51, 51, 51</p>
+                            <p>CMYK: 0, 0, 0, 80</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typography -->
+            <div class="section-title" style="margin-top: 40px;">
+                <i class="ri-text"></i> Typography
+            </div>
+
+            <div class="typo-section">
+                <div class="font-display">
+                    <span class="typo-label">Primary Typeface</span>
+                    <h2>Aa</h2>
+                    <span class="font-name">Alibaba Sans</span>
+                    <p style="color: #666; line-height: 1.6; max-width: 90%;">
+                        Alibaba Sans is our primary typeface. It is clean, modern, and highly legible, perfect for conveying financial clarity and professionalism. It should be used for headlines and major brand statements.
+                    </p>
+                    <div style="margin-top: 30px; display: flex; gap: 20px;">
+                        <span style="font-family: 'AlibabaSans-Regular'; font-size: 20px;">Regular</span>
+                        <span style="font-family: 'AlibabaSans-Medium'; font-size: 20px;">Medium</span>
+                        <span style="font-family: 'AlibabaSans-Bold'; font-size: 20px; font-weight: bold;">Bold</span>
+                    </div>
+                </div>
+
+                <div class="typo-hierarchy">
+                    <span class="typo-label">Hierarchy Example</span>
+                    <div>
+                        <h1>Headline Level 1</h1>
+                        <p>Font: Alibaba Sans Bold | Size: 60px | Usage: Main Headlines</p>
+                    </div>
+                    <div>
+                        <h2>Headline Level 2</h2>
+                        <p>Font: Alibaba Sans Medium | Size: 40px | Usage: Section Headers</p>
+                    </div>
+                    <div>
+                        <h3>Headline Level 3</h3>
+                        <p>Font: MiSans Regular | Size: 28px | Usage: Subheaders</p>
+                    </div>
+                    <div style="border: none;">
+                        <p style="font-family: 'MiSans-Regular';">Body Text<br>
+                        This is an example of body text using MiSans Regular. It is used for all long-form content, letters, and detailed descriptions. The font size should generally be between 16px and 18px for optimal readability.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design Elements -->
+            <div class="section-title" style="margin-top: 40px;">
+                <i class="ri-layout-masonry-line"></i> Design Elements
+            </div>
+
+            <div class="elements-section">
+                <div class="element-card">
+                    <h3 style="font-size: 24px; margin-bottom: 20px;">Iconography</h3>
+                    <p style="color: #666;">Clean, outline-style icons with rounded corners.</p>
+                    <div class="icon-grid">
+                        <div class="icon-box"><i class="ri-home-4-line"></i></div>
+                        <div class="icon-box"><i class="ri-bank-card-line"></i></div>
+                        <div class="icon-box"><i class="ri-shake-hands-line"></i></div>
+                        <div class="icon-box"><i class="ri-pie-chart-line"></i></div>
+                        <div class="icon-box"><i class="ri-user-smile-line"></i></div>
+                        <div class="icon-box"><i class="ri-secure-payment-line"></i></div>
+                    </div>
+                </div>
+                <div class="element-card">
+                    <h3 style="font-size: 24px; margin-bottom: 20px;">Graphic Motifs</h3>
+                    <p style="color: #666;">Use vertical bars inspired by the logo to create rhythm and structure.</p>
+                    <div style="height: 150px; display: flex; align-items: center; justify-content: center; gap: 15px; margin-top: 30px;">
+                        <div style="width: 20px; height: 100px; background: #D02E2E; border-radius: 4px;"></div>
+                        <div style="width: 20px; height: 60px; background: #61B15A; border-radius: 4px;"></div>
+                        <div style="width: 20px; height: 120px; background: #00A3E0; border-radius: 4px;"></div>
+                    </div>
+                </div>
+                <div class="element-card">
+                    <h3 style="font-size: 24px; margin-bottom: 20px;">Photography Style</h3>
+                    <p style="color: #666;">Bright, airy, South Florida aesthetic. Focus on modern homes, happy families, and clear skies.</p>
+                    <div style="height: 150px; margin-top: 30px; background: #eee; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999;">
+                        Photo Placeholder: Bright Living Room
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mockups -->
+            <div class="section-title" style="margin-top: 40px;">
+                <i class="ri-macbook-line"></i> Application Examples
+            </div>
+
+            <div class="mockup-section">
+                <div class="mockup-card">
+                    <div class="card-bg">
+                        <div>
+                            <img src="https://a.lovart.ai/artifacts/user/YxmGso6bO7GpZNFb.png" class="card-logo">
+                        </div>
+                        <div style="margin-top: 40px;">
+                            <h4 style="font-size: 18px; margin-bottom: 5px;">John Doe</h4>
+                            <p style="font-size: 12px; color: #888; margin-bottom: 20px;">Senior Loan Officer</p>
+                            <p style="font-size: 12px; color: #555;">+1 (305) 555-0123</p>
+                            <p style="font-size: 12px; color: #555;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ff95909791d19b909abf988d9c939a919b969198d19c9092">[email&#160;protected]</a></p>
+                            <p style="font-size: 12px; color: #555;">www.grclending.com</p>
+                        </div>
+                        <div style="position: absolute; right: 0; top: 0; bottom: 0; width: 10px; background: linear-gradient(to bottom, #D02E2E 33%, #61B15A 33%, #61B15A 66%, #00A3E0 66%);"></div>
+                    </div>
+                    <div class="mockup-label">Business Card</div>
+                </div>
+                
+                <div class="mockup-card" style="background: #eef1f5;">
+                    <div style="width: 320px; height: 400px; background: #fff; padding: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
+                        <div style="border-bottom: 2px solid #f0f0f0; padding-bottom: 20px; margin-bottom: 20px;">
+                            <img src="https://a.lovart.ai/artifacts/user/YxmGso6bO7GpZNFb.png" style="width: 100px;">
+                        </div>
+                        <p style="font-size: 12px; color: #999; margin-bottom: 20px;">Dear Client,</p>
+                        <div style="height: 10px; background: #f0f0f0; margin-bottom: 10px; width: 100%;"></div>
+                        <div style="height: 10px; background: #f0f0f0; margin-bottom: 10px; width: 90%;"></div>
+                        <div style="height: 10px; background: #f0f0f0; margin-bottom: 10px; width: 95%;"></div>
+                        <div style="height: 10px; background: #f0f0f0; margin-bottom: 10px; width: 80%;"></div>
+                        <div style="margin-top: 40px; display: flex; gap: 5px;">
+                            <div style="width: 30px; height: 4px; background: #D02E2E;"></div>
+                            <div style="width: 30px; height: 4px; background: #61B15A;"></div>
+                            <div style="width: 30px; height: 4px; background: #00A3E0;"></div>
+                        </div>
+                    </div>
+                    <div class="mockup-label">Letterhead System</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div>
+            <img src="https://a.lovart.ai/artifacts/user/YxmGso6bO7GpZNFb.png" style="width: 150px; filter: brightness(0) invert(1); opacity: 0.8; margin-bottom: 10px;">
+            <p>GRC Mortgage Lending Brand Guidelines</p>
+        </div>
+        <div style="text-align: right;">
+            <p>© 2024 GRC Lending. All Rights Reserved.</p>
+            <p style="font-size: 14px; opacity: 0.5;">Internal Use Only</p>
+        </div>
+    </footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
