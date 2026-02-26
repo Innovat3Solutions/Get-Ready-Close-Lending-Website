@@ -27,7 +27,7 @@ export const es = {
 
     // Home Page
     'home.hero.badge': 'Sus Expertos Hipotecarios del Sur de la Florida',
-    'home.hero.title1': 'En sus marcas, listos,',
+    'home.hero.title1': 'Prepárate,',
     'home.hero.title2': 'Cierre.',
     'home.hero.desc': 'Elevando el estándar del financiamiento inmobiliario en el sur de la Florida. Ya sea que esté comprando una casa de lujo en Miami o una propiedad de inversión, nuestras décadas de experiencia garantizan una transacción sin problemas.',
     'home.hero.cta': 'Iniciar Solicitud',

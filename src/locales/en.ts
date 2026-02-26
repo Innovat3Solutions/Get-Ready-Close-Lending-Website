@@ -27,7 +27,7 @@ export const en = {
 
     // Home Page
     'home.hero.badge': 'Your South Florida Mortgage Experts',
-    'home.hero.title1': 'Ready, Set,',
+    'home.hero.title1': 'Get Ready,',
     'home.hero.title2': 'Close.',
     'home.hero.desc': "Elevating the standard of South Florida real estate financing. Whether you're purchasing a luxury home in Miami or an investment property, our decades of expertise guarantee a seamless transaction.",
     'home.hero.cta': 'Start Application',

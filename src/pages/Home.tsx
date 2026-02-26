@@ -70,7 +70,7 @@ export default function Home() {
 
                         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-white mb-8 leading-[1.05] tracking-tight">
                             <span className="sr-only">Your Premiere South Florida Mortgage Lender</span>
-                            {t('home.hero.title1') || "Ready, Set,"} <span className="italic font-light text-grc-blue">{t('home.hero.title2') || "Close."}</span>
+                            {t('home.hero.title1') || "Get Ready,"} <span className="italic font-light text-grc-blue">{t('home.hero.title2') || "Close."}</span>
                         </h1>
 
                         <p className="text-lg md:text-xl text-slate-300 mb-12 leading-relaxed font-light max-w-2xl text-center mx-auto">
