@@ -129,7 +129,7 @@ export default function Contact() {
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="lg:col-span-3 bg-white rounded-2xl shadow-xl p-5 sm:p-8 lg:p-12 border border-slate-100 order-2 lg:order-1"
+                        className="lg:col-span-3 lg:w-[750px] rounded-2xl shadow-xl p-5 sm:p-8 lg:p-12 border border-slate-100 order-2 lg:order-1"
                     >
                         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-3 mb-6 sm:mb-8">
                             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-grc-blue/10 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -141,62 +141,28 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <form className="space-y-4 sm:space-y-6">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                                <div>
-                                    <label htmlFor="firstName" className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-1.5 sm:mb-2">{t('contact.form.firstName')}</label>
-                                    <input type="text" id="firstName" className="w-full p-3 sm:p-4 bg-light-grey border border-slate-200 rounded-lg focus:ring-2 focus:ring-grc-blue focus:border-grc-blue outline-none transition-all placeholder:text-slate-400 text-base" placeholder={t('contact.form.firstName.placeholder') || "John"} />
-                                </div>
-                                <div>
-                                    <label htmlFor="lastName" className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-1.5 sm:mb-2">{t('contact.form.lastName')}</label>
-                                    <input type="text" id="lastName" className="w-full p-3 sm:p-4 bg-light-grey border border-slate-200 rounded-lg focus:ring-2 focus:ring-grc-blue focus:border-grc-blue outline-none transition-all placeholder:text-slate-400 text-base" placeholder={t('contact.form.lastName.placeholder') || "Doe"} />
-                                </div>
-                            </div>
+                        <div className="w-full">
+                        <iframe
+    src="https://api.leadconnectorhq.com/widget/form/d0CneIE4TtDXsOwbI96J"
+    style={{ width: "100%", height: "900px", border: "none", borderRadius: "20px" }}
+    id="inline-d0CneIE4TtDXsOwbI96J" 
+    data-layout="{'id':'INLINE'}"
+    data-trigger-type="alwaysShow"
+    data-trigger-value=""
+    data-activation-type="alwaysActivated"
+    data-activation-value=""
+    data-deactivation-type="neverDeactivate"
+    data-deactivation-value=""
+    data-form-name="GRC Contact Form"
+    data-height="686"
+    data-layout-iframe-id="inline-d0CneIE4TtDXsOwbI96J"
+    data-form-id="d0CneIE4TtDXsOwbI96J"
+    title="GRC Contact Form"
+        />
 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                                <div>
-                                    <label htmlFor="email" className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-1.5 sm:mb-2">{t('contact.form.email')}</label>
-                                    <input type="email" id="email" className="w-full p-3 sm:p-4 bg-light-grey border border-slate-200 rounded-lg focus:ring-2 focus:ring-grc-blue focus:border-grc-blue outline-none transition-all placeholder:text-slate-400 text-base" placeholder={t('contact.form.email.placeholder') || "john@example.com"} />
-                                </div>
-                                <div>
-                                    <label htmlFor="phone" className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-1.5 sm:mb-2">{t('contact.form.phone')}</label>
-                                    <input type="tel" id="phone" className="w-full p-3 sm:p-4 bg-light-grey border border-slate-200 rounded-lg focus:ring-2 focus:ring-grc-blue focus:border-grc-blue outline-none transition-all placeholder:text-slate-400 text-base" placeholder={t('contact.form.phone.placeholder') || "(305) 555-0000"} />
-                                </div>
-                            </div>
 
-                            <div>
-                                <label htmlFor="interest" className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-1.5 sm:mb-2">{t('contact.form.interest')}</label>
-                                <select
-                                    id="interest"
-                                    value={interest}
-                                    onChange={(e) => setInterest(e.target.value)}
-                                    className="w-full p-3 sm:p-4 bg-light-grey border border-slate-200 rounded-lg focus:ring-2 focus:ring-grc-blue focus:border-grc-blue outline-none transition-all text-corp-grey text-base"
-                                >
-                                    <option>{t('contact.form.interest.opt1')}</option>
-                                    <option>{t('contact.form.interest.opt2')}</option>
-                                    <option>{t('contact.form.interest.opt3')}</option>
-                                    <option>{t('contact.form.interest.opt4')}</option>
-                                    <option>{t('contact.form.interest.opt5')}</option>
-                                    <option>{t('contact.form.interest.opt6')}</option>
-                                    <option>{t('contact.form.interest.opt7')}</option>
-                                </select>
-                            </div>
 
-                            <div>
-                                <label htmlFor="message" className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-1.5 sm:mb-2">{t('contact.form.message')}</label>
-                                <textarea id="message" rows={4} className="w-full p-3 sm:p-4 bg-light-grey border border-slate-200 rounded-lg focus:ring-2 focus:ring-grc-blue focus:border-grc-blue outline-none transition-all placeholder:text-slate-400 resize-none text-base" placeholder={t('contact.form.message.placeholder') || "Tell us about your lending needs..."}></textarea>
-                            </div>
-
-                            <button type="button" className="group relative w-full inline-flex items-center justify-center bg-grc-blue text-white px-6 sm:px-10 py-3.5 sm:py-4 text-sm font-bold uppercase tracking-[0.1em] sm:tracking-[0.15em] overflow-hidden transition-all duration-300 rounded-lg hover:bg-corp-grey active:scale-[0.98]">
-                                <span className="relative z-10 flex items-center gap-2">
-                                    <span>{t('contact.form.submit')}</span>
-                                    <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                                </span>
-                            </button>
-                            <p className="text-center text-xs text-slate-400 mt-3 sm:mt-4 leading-relaxed">
-                                {t('contact.form.disclaimer')}
-                            </p>
-                        </form>
+                        </div>
                     </motion.div>
 
                     {/* Sidebar Info - Takes 2 columns */}
@@ -204,7 +170,7 @@ export default function Contact() {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.3 }}
-                        className="lg:col-span-2 space-y-4 sm:space-y-6 order-1 lg:order-2"
+                        className="lg:col-span-2 space-y-4 sm:space-y-6 order-1 lg:order-2 lg:pl-[60px]"
                     >
                         {/* Mobile Quick Contact - Only visible on mobile */}
                         <div className="lg:hidden bg-gradient-to-r from-grc-blue to-corp-grey rounded-2xl p-4 text-white">
